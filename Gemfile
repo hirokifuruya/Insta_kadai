@@ -19,6 +19,9 @@ gem 'binding_of_caller'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'rexml'
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
 
 group :development, :test do
 
