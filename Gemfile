@@ -18,6 +18,7 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rexml'
 
 group :development, :test do
 
@@ -35,6 +36,10 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   gem 'webdrivers'
+end
+
+group :development do
+  gem 'letter_opener_web'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

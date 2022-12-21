@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_21_030852) do
+ActiveRecord::Schema.define(version: 2022_12_21_155403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2022_12_21_030852) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.text "image"
   end
 
   add_foreign_key "blogs", "users"
