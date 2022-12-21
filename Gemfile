@@ -13,6 +13,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bcrypt'
+gem 'pry-rails'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
 
