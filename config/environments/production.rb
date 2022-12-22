@@ -52,7 +52,7 @@ Rails.application.configure do
 
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'https://young-falls-82845.herokuapp.com/'}
+  config.action_mailer.default_url_options = { host: 'https://hidden-coast-10913.herokuapp.com/'}
 config.action_mailer.delivery_method = :letter_opener_web
 
 end
