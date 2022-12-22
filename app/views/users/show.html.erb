@@ -10,3 +10,9 @@
       end
   %>
 </p>
+
+<% if @user.id == current_user.id %>
+  <%= link_to '編集', edit_user_path(@user.id) %>
+<% end %>
+<%= link_to 'みんなの投稿', blogs_path %>
+<%= link_to 'お気に入り投稿', favorite_blog_user_path(@user.id) %>

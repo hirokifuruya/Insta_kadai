@@ -1,0 +1,29 @@
+<h1>プロフィール編集</h1>
+
+<%= form_with(model: @user, local: true, url: user_path(@user.id)) do |f| %> 
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "件のエラー") %> があります</h2>
+      <br>
+      <% @user.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+  <% end %>
+  <%= f.label :avatar %>
+  <%= f.file_field :avatar %>
+  <br>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <br>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <br>
+  <%= f.submit "Edit my account" %>
+<% end %>

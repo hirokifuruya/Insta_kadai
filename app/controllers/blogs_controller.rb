@@ -13,6 +13,11 @@ class BlogsController < ApplicationController
     end
   end
 
+  def confirm
+    @blog = current_user.blogs.build(blog_params)
+    render :new if @blog.invalid?
+  end
+
   def create
     @blog = Blog.new(blog_params)
     @blog = current_user.blogs.build(blog_params)
@@ -27,6 +32,16 @@ class BlogsController < ApplicationController
       end
     end
   end
+
+  def edit
+    @blog = Blog.find(params[:id])
+    if @blog.user_id == current_user.id
+      render :edit
+    else
+      redirect_to blogs_path
+    end
+  end
+
 
   def show
     @favorite = current_user.favorites.find_by(blog_id: @blog.id)
