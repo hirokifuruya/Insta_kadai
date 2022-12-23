@@ -131,6 +131,8 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mimemagic (0.3.7)
+      nokogiri (~> 1.11.2)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
     minitest (5.16.3)
@@ -145,9 +147,9 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.10-arm64-darwin)
+    nokogiri (1.11.7-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.10-x86_64-linux)
+    nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.5)
     pry (0.14.1)
@@ -270,6 +272,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   letter_opener_web
   listen (~> 3.3)
+  mimemagic (= 0.3.7)
   mini_magick
   net-imap
   net-pop

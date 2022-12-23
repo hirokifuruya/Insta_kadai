@@ -65,15 +65,15 @@ class BlogsController < ApplicationController
     @blog = current_user.blogs.build(blog_params)
     render :new if @blog.invalid?
   end
-  
+
   private
 
   def blog_params
     params.require(:blog).permit(:title, :content, :image, :image_cache, :email)
   end
-  
+
   def set_blog
     @blog = Blog.find(params[:id])
   end
-  
+
 end

@@ -1,7 +1,5 @@
 <h1>一覧</h1>
 
-<p><%= notice %></p>
-
 <table>
   <tr>
     <th>タイトル</th>
@@ -12,9 +10,12 @@
   <tr>
     <td><%= blog.title %></td>
     <td><%= blog.content %></td>
+    <tb><%= image_tag blog.image_url %></tb>
     <td><%= link_to '詳細を確認する', blog_path(blog.id) %></td>
+    <% if blog.user_id == current_user.id %>
     <td><%= link_to "編集する", edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' } %></td>
     <td><%= link_to '削除する', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

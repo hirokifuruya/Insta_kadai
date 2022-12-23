@@ -2,10 +2,18 @@ body {
   text-align:center;
   background-color: rgb(210, 201, 218);
   color: rgb(4, 11, 72);
-  margin: 33px; 
+  margin: 33px;
 }
 
 ul {list-style: none;}
+
+header {
+  background-color: rgb(254, 254, 254);
+}
+
+footer {
+  background-color: rgb(255, 254, 255);
+}
 /*
  *= require_tree .
  *= require_self
