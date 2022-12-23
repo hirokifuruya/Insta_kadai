@@ -10,11 +10,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <header>
-    <h1>インスタ</h1>
-  </header>
 
   <body>
+    <header>
+    <h1>インスタ</h1>
+    </header>
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
@@ -29,10 +29,10 @@
     <% end %>
 
     <%= yield %>
-  </body>
 
-  <footer>
-  <p>難しいアプリ</p>
-  </footer>
+      <footer>
+      <p>難しいアプリ</p>
+      </footer>
+  </body>
 
 </html>
